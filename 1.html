@@ -8,3 +8,19 @@
 <a href="https://www.w3schools.com">6677889900</a>
 
 
+<!DOCTYPE html><html><head><title>Number Input Display</title></head><body><h2>Enter a Number</h2><input type="number" id="numberInput" placeholder="Enter number"><button onclick="addNumber()">Add</button><h3>Numbers:</h3><ul id="numberList"></ul><script>function addNumber() {
+            let input = document.getElementById("numberInput");
+            let value = input.value;
+
+            if (value === "") {
+                alert("Please enter a number");
+                return;
+            }
+
+            let li = document.createElement("li");
+            li.textContent = value;
+
+            document.getElementById("numberList").appendChild(li);
+
+            input.value = ""; // clear input
+        }</script></body></html>
